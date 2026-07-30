@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Monica ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating Background -->
+    <div id="particles"></div>
+
+    <!-- Password Screen -->
+    <div id="password-screen">
+
+        <div class="glass-card">
+
+            <h1>💖 A Special Surprise 💖</h1>
+
+            <p>Only one special person can unlock this gift...</p>
+
+            <input
+                id="password"
+                type="password"
+                placeholder="Enter Password">
+
+            <button onclick="checkPassword()">
+                Unlock ❤️
+            </button>
+
+            <p id="error"></p>
+
+        </div>
+
+    </div>
+
+    <!-- Main Website -->
+    <div id="main">
+
+        <!-- Music -->
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <h3>🎂 Happy Birthday 🎂</h3>
+
+            <h1>
+                Monica Princy ❤️
+            </h1>
+
+            <p class="subtitle">
+                My favorite person in the whole world.
+            </p>
+
+            <div id="countdown"></div>
+
+            <button class="musicBtn" onclick="toggleMusic()">
+                🎵 Play Music
+            </button>
+
+        </section>
+
+        <!-- Letter -->
+        <section class="letter">
+
+            <h2>💌 My Letter</h2>
+
+            <div id="typewriter"></div>
+
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery">
+
+            <h2>📸 Our Memories</h2>
+
+            <div class="gallery-grid">
+
+                <img src="images/photo1.jpg">
+
+                <img src="images/photo2.jpg">
+
+                <img src="images/photo3.jpg">
+
+                <img src="images/photo4.jpg">
+
+            </div>
+
+        </section>
+
+        <!-- Reasons -->
+        <section class="love-box">
+
+            <h2>❤️ Reasons I Love You</h2>
+
+            <div id="loveReasons"></div>
+
+        </section>
+
+        <!-- Surprise -->
+        <section class="gift">
+
+            <button onclick="openGift()">
+
+                🎁 Open Your Surprise
+
+            </button>
+
+        </section>
+
+        <!-- Hidden Surprise -->
+        <div id="giftMessage">
+
+            <h1>❤️ I Love You ❤️</h1>
+
+            <p>
+
+                No matter what happens,
+                I will always pray for your happiness.
+
+                Thank you for coming into my life.
+
+                Happy Birthday, Theivam. ❤️
+
+            </p>
+
+        </div>
+
+        <footer>
+
+            Made with ❤️ by <b>Vishuu</b>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
