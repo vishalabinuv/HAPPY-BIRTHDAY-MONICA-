@@ -1,0 +1,433 @@
+/* Google Font */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff9ec4,#ffd6e7,#ffeaf4);
+    color:#fff;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* Animated Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.35),transparent 40%),
+    radial-gradient(circle at 80% 30%,rgba(255,255,255,.25),transparent 35%),
+    radial-gradient(circle at 50% 80%,rgba(255,255,255,.2),transparent 40%);
+    animation:bgMove 12s ease-in-out infinite alternate;
+    z-index:-2;
+}
+
+@keyframes bgMove{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.2);
+}
+
+}
+
+/* Password Screen */
+
+#password-screen{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.glass-card{
+
+    width:100%;
+    max-width:420px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.25);
+
+    text-align:center;
+
+    animation:fadeUp 1.2s ease;
+}
+
+.glass-card h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.glass-card p{
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    outline:none;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+button{
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:14px 35px;
+
+    background:#ff4f87;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    background:#ff2f6d;
+
+}
+
+#error{
+
+    color:#fff700;
+
+    margin-top:15px;
+
+}
+
+/* Main */
+
+#main{
+
+display:none;
+
+animation:fadeIn 1.5s ease;
+
+}
+
+/* Hero */
+
+.hero{
+
+padding:80px 20px;
+
+text-align:center;
+
+}
+
+.hero h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.hero h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:82px;
+
+text-shadow:0 0 20px rgba(255,255,255,.8);
+
+}
+
+.subtitle{
+
+margin-top:20px;
+
+font-size:24px;
+
+}
+
+#countdown{
+
+margin-top:35px;
+
+font-size:32px;
+
+font-weight:bold;
+
+background:rgba(255,255,255,.2);
+
+display:inline-block;
+
+padding:18px 35px;
+
+border-radius:50px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 20px rgba(255,255,255,.25);
+
+}
+
+.musicBtn{
+
+margin-top:30px;
+
+}
+
+/* Letter */
+
+.letter{
+
+width:90%;
+
+max-width:900px;
+
+margin:60px auto;
+
+background:rgba(255,255,255,.18);
+
+padding:40px;
+
+border-radius:25px;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 0 30px rgba(255,255,255,.25);
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+.letter h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:52px;
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+/* Gift Section */
+
+.gift{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.gift button{
+    font-size:22px;
+    padding:18px 40px;
+    background:linear-gradient(45deg,#ff4f87,#ff8fab);
+    box-shadow:0 10px 25px rgba(255,79,135,.4);
+}
+
+.gift button:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* Hidden Message */
+
+#giftMessage{
+    display:none;
+    width:90%;
+    max-width:850px;
+    margin:50px auto;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    animation:fadeIn 1.2s ease;
+}
+
+#giftMessage h1{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+#giftMessage p{
+    font-size:20px;
+    line-height:2;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    font-size:18px;
+}
+
+/* Floating Hearts */
+
+.heart{
+    position:fixed;
+    bottom:-60px;
+    pointer-events:none;
+    animation:floatHeart 6s linear forwards;
+    z-index:999;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+/* Sparkles */
+
+.sparkle{
+    position:fixed;
+    font-size:18px;
+    pointer-events:none;
+    animation:sparkle 3s linear forwards;
+}
+
+@keyframes sparkle{
+
+    from{
+        opacity:1;
+        transform:translateY(0) scale(0);
+    }
+
+    to{
+        opacity:0;
+        transform:translateY(-250px) scale(2);
+    }
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:58px;
+}
+
+.hero h3{
+    font-size:22px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+#countdown{
+    font-size:22px;
+    padding:14px 24px;
+}
+
+.glass-card h1{
+    font-size:38px;
+}
+
+.letter{
+    padding:25px;
+    font-size:17px;
+}
+
+.letter h2{
+    font-size:40px;
+}
+
+#giftMessage h1{
+    font-size:50px;
+}
+
+#giftMessage p{
+    font-size:18px;
+}
+
+button{
+    width:100%;
+}
+
